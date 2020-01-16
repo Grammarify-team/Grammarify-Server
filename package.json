@@ -1,0 +1,30 @@
+{
+  "name": "Grammarify-Server",
+  "version": "1.0.0",
+  "description": "Back-end/Server Side for Grammarify app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grammarify-team/Grammarify-Server.git"
+  },
+  "keywords": [],
+  "author": "Ahmad,Nafies,Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grammarify-team/Grammarify-Server/issues"
+  },
+  "homepage": "https://github.com/Grammarify-team/Grammarify-Server#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.7"
+  }
+}
