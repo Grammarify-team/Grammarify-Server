@@ -7,10 +7,13 @@ module.exports = {
     axios({
       method: 'post',
       url: `http://api.ocr.space/parse/image`,
-      data: {
-        "url": "http://dl.a9t9.com/blog/ocr-online/screenshot.jpg"
+      headers: {
+        'content-type': 'image/png',
+        apikey: process.env.OCRAPI
       },
-      headers: { apikey: process.env.OCRAPI },
+      data: {
+        url
+      }
     })
       .then(results => res.send(results.data))
       .catch(err => res.send(err.message))
