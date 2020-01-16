@@ -5,17 +5,13 @@ module.exports = {
     const { url } = req.body
     console.log(url)
     axios({
-      method: 'post',
-      url: `http://api.ocr.space/parse/image`,
-      headers: {
-        'content-type': 'image/png',
-        apikey: process.env.OCRAPI
-      },
-      data: {
-        url
-      }
+      method: 'get',
+      url: `http://api.ocr.space/parse/imageurl?apikey=${process.env.OCRAPI}&url=${url}`,
     })
-      .then(results => res.send(results.data))
-      .catch(err => res.send(err.message))
+      .then(results => {
+        const result = results.data.ParsedResults[0].ParsedText.split('\r\n').join(' ')
+        res.status(200).json({ parsed: result })
+      })
+      .catch(err => res.status(500).json({ msg: err.message }))
   }
 }
