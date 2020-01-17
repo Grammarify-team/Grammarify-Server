@@ -1,12 +1,9 @@
-# Grammarify-Server
-Back-end/Server Side for Grammarify app
-
-## Grammarify API Documentation
+# Grammarify API Documentation
 Base URL : **http://api-grammarify.nafies.tech**
 
 ---
 
-  ### **Upload File**
+## **Upload File**
   ----
   Upload file image or pdf to Server Storage, and return link
 
@@ -43,7 +40,7 @@ Base URL : **http://api-grammarify.nafies.tech**
 
 -----
 
-### **Parse File**
+## **Parse File**
   ----
   Parse file image or pdf to text and check grammar.
 
@@ -73,7 +70,7 @@ Base URL : **http://api-grammarify.nafies.tech**
 
 -----
 
-### **Check Grammar**
+## **Check Grammar**
   ----
   Check grammar from text input
 
