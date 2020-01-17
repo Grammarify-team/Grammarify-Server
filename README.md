@@ -184,3 +184,9 @@ Base URL : **http://api-grammarify.nafies.tech**
   }
   ```
 
+* **Error Response :**    
+  Code : 500    
+  Content : `Internal server error`
+
+
+*For another issue, feel free to contact @nafies1*
