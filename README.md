@@ -45,7 +45,7 @@ Base URL : **http://api-grammarify.nafies.tech**
 
 ### **Parse File**
   ----
-  Parse file image or pdf to Server Storage
+  Parse file image or pdf to text and check grammar.
 
 * **URL**
 
@@ -62,6 +62,14 @@ Base URL : **http://api-grammarify.nafies.tech**
 * **req.body:**
 
   url : __http://image.com/img.png__
+
+* **Success Response :**    
+  Code : 200    
+  Content : Result from grammar check of the text. Check success response in Check Grammar route
+
+* **Error Response :**    
+  Code : 500    
+  Content : `{"msg": {}}`
 
 -----
 
