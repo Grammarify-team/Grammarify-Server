@@ -22,7 +22,7 @@ module.exports = {
       })
       .then(result => {
         const data = result.data
-        console.log('hasil grammar check', data.matches)
+        // console.log('hasil grammar check', data.matches)
         res.status(200).json({ result: data, parsedText })
       })
       .catch(err => res.status(500).json({ msg: err}))
