@@ -17,7 +17,7 @@ module.exports = {
         parsedText = parsed
         return axios({
           method: 'get',
-          url: `http://localhost:3000/grammar/${parsed}`
+          url: `http://api-grammarify.nafies.tech/grammar/${parsed}`
         })
       })
       .then(result => {
@@ -25,6 +25,6 @@ module.exports = {
         // console.log('hasil grammar check', data.matches)
         res.status(200).json({ result: data, parsedText })
       })
-      .catch(err => res.status(500).json({ msg: err}))
+      .catch(err => res.status(500).json({ msg: err }))
   }
 }
