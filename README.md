@@ -4,7 +4,6 @@ Base URL : **http://api-grammarify.nafies.tech**
 ---
 
 ## **Upload File**
-  ----
   Upload file image or pdf to Server Storage, and return link
 
 * **URL**
@@ -41,7 +40,6 @@ Base URL : **http://api-grammarify.nafies.tech**
 -----
 
 ## **Parse File**
-  ----
   Parse file image or pdf to text and check grammar.
 
 * **URL**
@@ -71,7 +69,6 @@ Base URL : **http://api-grammarify.nafies.tech**
 -----
 
 ## **Check Grammar**
-  ----
   Check grammar from text input
 
 * **URL**
