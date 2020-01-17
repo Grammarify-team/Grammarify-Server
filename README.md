@@ -8,7 +8,7 @@ Base URL : **http://api-grammarify.nafies.tech**
 
   ### **Upload File**
   ----
-  Upload file image or pdf to Server Storage
+  Upload file image or pdf to Server Storage, and return link
 
 * **URL**
 
@@ -26,6 +26,20 @@ Base URL : **http://api-grammarify.nafies.tech**
 
   file.png / file.img / file.pdf    
   *Receive file pdf ,  jpg, etc contains text*
+
+* **Success Response :**    
+  Code : 200    
+  Content : 
+  ```javascript
+  {
+    "status": 200,
+    "message": "Your file is successfully uploaded",
+    "link": "https://storage.googleapis.com/grammarify-project/1579252422801Contoh-Teks-Ulasan.png"
+  }           
+  ```
+* **Error Response :**    
+  Code : 500 / 400    
+  Content : `Cannot read property 'cloudStoragePublicUrl' of undefined`
 
 -----
 
@@ -70,3 +84,95 @@ Base URL : **http://api-grammarify.nafies.tech**
 * **req.body :**
 
   None
+
+* **Success Response :**    
+  Code : 200    
+  Content : Example output with input I has two apple
+  ```javascript
+  {
+    "software": {
+        "name": "GrammarBot",
+        "version": "4.3.1",
+        "apiVersion": 1,
+        "premium": false,
+        "premiumHint": "You might be missing errors only the Premium version can find. Upgrade to see what you're missing.",
+        "status": ""
+    },
+    "warnings": {
+        "incompleteResults": false
+    },
+    "language": {
+        "name": "English (US)",
+        "code": "en-US",
+        "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US"
+        }
+    },
+    "matches": [
+        {
+            "message": "The pronoun 'I' must be used with a non-third-person form of a verb: \"have\", \"haven\"",
+            "shortMessage": "Grammatical problem: agreement error",
+            "replacements": [
+                {
+                    "value": "have"
+                },
+                {
+                    "value": "haven"
+                }
+            ],
+            "offset": 2,
+            "length": 3,
+            "context": {
+                "text": "I has two apple",
+                "offset": 2,
+                "length": 3
+            },
+            "sentence": "I has two apple",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "NON3PRS_VERB",
+                "subId": "1",
+                "description": "Agreement error: Third person verb with a non-third person pronoun",
+                "issueType": "grammar",
+                "category": {
+                    "id": "GRAMMAR",
+                    "name": "Grammar"
+                }
+            }
+        },
+        {
+            "message": "Statistics suggests that 'apples' might be the correct word here. Please check.",
+            "shortMessage": "",
+            "replacements": [
+                {
+                    "value": "apples"
+                }
+            ],
+            "offset": 10,
+            "length": 5,
+            "context": {
+                "text": "I has two apple",
+                "offset": 10,
+                "length": 5
+            },
+            "sentence": "I has two apple",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "CONFUSION_RULE",
+                "description": "Statistically detect wrong use of words that are easily confused",
+                "issueType": "non-conformance",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            }
+        }
+    ]
+  }
+  ```
+
